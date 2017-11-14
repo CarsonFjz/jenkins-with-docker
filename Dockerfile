@@ -13,6 +13,6 @@ RUN apt-get update && apt-get install -y \
         $(lsb_release -cs) \
         stable" \
     && apt-get update \
-    && apt-get install -y docker-ce
-CMD groupmod -g 233 docker && usermod -a -G docker jenkins
+    && apt-get install -y docker-ce \
+    && groupmod -g 233 docker && usermod -a -G docker jenkins
 USER jenkins
