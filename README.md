@@ -2,9 +2,18 @@
 
 This is a simple dockerfile that pulls from the [Jenkins LTS Docker Image](https://hub.docker.com/r/jenkins/jenkins/), adds in [Docker CE](https://docs.docker.com/engine/installation/linux/docker-ce/debian/) for the command line interface, and sets up the user account for the shared docker socket from [CoreOS](https://coreos.com/).
 
-## Usage
+### Supported tags and respective `Dockerfile` links
 
-Template Systemd Service Unit
+- [`latest`](https://github.com/coodeneko/jenkins-with-docker/blob/master/Dockerfile)
+- [`lts`](https://github.com/coodeneko/jenkins-with-docker/blob/master/lts/Dockerfile)
+- [`alpine`](https://github.com/coodeneko/jenkins-with-docker/blob/master/alpine/Dockerfile)
+- [`lts-alpine`](https://github.com/coodeneko/jenkins-with-docker/blob/master/lts/alpine/Dockerfile)
+- [`slim`](https://github.com/coodeneko/jenkins-with-docker/blob/master/slim/Dockerfile)
+- [`lts-slim`](https://github.com/coodeneko/jenkins-with-docker/blob/master/lts/slim/Dockerfile)
+
+### Usage
+
+Template Systemd Service Unit using port 8080
 
 ```
 [Unit]
