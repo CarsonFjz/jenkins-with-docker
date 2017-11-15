@@ -1,6 +1,6 @@
 # Jenkins With Docker
 
-This is a simple dockerfile that pulls from the [Jenkins LTS Docker Image](https://hub.docker.com/r/jenkins/jenkins/), adds in [Docker CE](https://docs.docker.com/engine/installation/linux/docker-ce/debian/) for the command line interface, and sets up the user account for the shared docker socket from [CoreOS](https://coreos.com/).
+This is a simple dockerfile that pulls from the [Jenkins Docker Image](https://hub.docker.com/r/jenkins/jenkins/), adds in [Docker CE](https://docs.docker.com/) for the command line interface, and sets up the user account for the shared docker socket from [CoreOS](https://coreos.com/).
 
 ### Supported tags and respective `Dockerfile` links
 
