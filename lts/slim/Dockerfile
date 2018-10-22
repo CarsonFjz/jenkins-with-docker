@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     gnupg2 \
     software-properties-common \
+    && echo 'deb http://http.debian.net/debian wheezy-backports main' > /etc/apt/sources.list.d/wheezy-backports-main.list \
     && curl -fsL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg | apt-key add - \
     && apt-key fingerprint 0EBFCD88 \
     && add-apt-repository \
@@ -13,6 +14,8 @@ RUN apt-get update && apt-get install -y \
         $(lsb_release -cs) \
         stable" \
     && apt-get update \
-    && apt-get install -y docker-ce \
+    && curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash \
+    && apt-get install -y docker-ce git-lfs \
+    && git lfs install \
     && groupmod -g 233 docker && usermod -a -G docker jenkins
 USER jenkins
