@@ -6,7 +6,6 @@ RUN apt-get update && apt-get install -y \
     curl \
     gnupg2 \
     software-properties-common \
-    && echo 'deb http://http.debian.net/debian wheezy-backports main' > /etc/apt/sources.list.d/wheezy-backports-main.list \
     && curl -fsL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg | apt-key add - \
     && apt-key fingerprint 0EBFCD88 \
     && add-apt-repository \
