@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
         $(lsb_release -cs) \
         stable" \
     && apt-get update \
-    && curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash \
+    && curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash \
     && apt-get install -y docker-ce git-lfs \
     && git lfs install \
     && groupmod -g 233 docker && usermod -a -G docker jenkins
