@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
     && curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash \
     && apt-get install -y docker-ce git-lfs \
     && git lfs install \
-    && groupmod -g 233 docker && usermod -a -G docker jenkins
+    && groupmod -g 233 docker && usermod -a -G docker jenkins \
     && curl -L https://github.com/docker/compose/releases/download/1.8.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose && \
     chmod +x /usr/local/bin/docker-compose
 USER jenkins
