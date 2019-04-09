@@ -5,7 +5,7 @@ services:
       context: ./lts
       dockerfile: Dockerfile
     container_name: jenkins
-    user: jenkins
+    user: carson
     volumes:
       - /jenkins_home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
